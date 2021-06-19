@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Projeto Pepsi</title>
+</head>
+<body>  
+    <section class="sec flex">
+        <header class="flex">
+            <a href="">
+                <img src="img/logo.png" alt="" class="logo">
+            </a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">What's New</a></li>
+                <li><a href="">Newsletter</a></li>
+                <li><a href="">Contact</a></li>
+                
+            </ul>
+        </header>
+        <div class="content flex">
+            <div class="texBox">
+                <h2>That's What<br /><span>I like</span> </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi cupiditate neque, accusamus quae quia dolorum repellat iste, eaque aliquam optio, at doloremque velit ab ipsa natus perferendis cumque magnam laborum.</p>
+                <a class="btn" href="">View All Product</a>
+            </div>
+            <div class="imgBox flex">
+                <img class="pepsi" src="img/pepsi001.png" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="/img/pepsi001.png" onclick="imgSlider('/img/pepsi001.png');changeBgColor('#0062be')" alt=""></li>
+            <li><img src="/img/pepsi002.png" onclick="imgSlider('/img/pepsi002.png');changeBgColor('#e60c2c')" alt=""></li>
+            <li><img src="/img/pepsi003.png" onclick="imgSlider('/img/pepsi003.png');changeBgColor('#1e1e1e')" alt=""></li>
+        </ul>
+        <ul class="sci">
+            <li><a href=""><img src="/img/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="img/instagram.png" alt=""></a></li>
+            <li><a href=""><img src="img/twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+    
+<script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.pepsi').src = anything;
+    }
+    function changeBgColor(color){
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+    function menuToggle(){
+        const toggleMenu = document.querySelector('.toggleMenu');
+        toggleMenu.classList.toggle('active')
+
+        const navigation = document.querySelector('.navigation');
+        navigation.classList.toggle('active')
+    }
+</script>
+</body>
+
+</html>

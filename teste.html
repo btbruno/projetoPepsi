@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #345d48;
+
+    }
+    .container{
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 20vh 70vh 10vh;
+        /* grid-gap:20px; */
+        grid-template-areas: "header header"
+                             "main aside"   
+                             "footer footer";
+
+    }
+    header{
+        background: yellow;  
+        grid-area: header;
+        
+        
+        display: flex;
+        justify-content: flex-end; 
+        align-items: center;
+        gap: 2px;
+        
+    }
+    header div{
+        background: white; 
+        
+        border: 2px solid #000;
+        width: 50px;
+        height: 50px;
+        
+        
+    }
+    main {
+        background: green; 
+        grid-area: main;
+        
+    }
+    aside{
+        background: blue; 
+        grid-area: aside;
+        
+    }
+    footer{
+        background: gray; 
+        grid-area: footer;
+        
+       
+        }
+</style>
+<body>
+<div class="container">
+    <header>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </header>
+    <main></main>
+    <aside></aside>
+    <footer>
+        GRID
+
+        - grid-template-columns =  Quantos colunas
+        - grid-template-rows = Quantas linhas
+        - grid-gap = Espaçamento em linhas ou colunas
+            grid-row-gap    
+            grid-column-gap
+        -grid-template-areas  
+
+    </footer>
+
+    
+</div>
+     
+
+</body>
+</html>
+
